@@ -11,7 +11,7 @@ const passport = require('passport');
 const multer = require('multer');
 const bodyParser = require('body-parser');
 const jwt = require('jsonwebtoken');
-var reload = require('reload');
+
 
 // Initializations
 const app = express();
@@ -75,5 +75,3 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.listen(app.get('port'), () => {
     console.log('Server on port', app.get('port'));
 });
-
-reload(app);
