@@ -1,0 +1,173 @@
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-orange elevation-4">
+    <!-- Brand Logo -->
+    <a href="/" class="brand-link">
+      <img src="/favicon.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light logoFont">Trigo Nuevo</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="{{user.img}}" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="#" class="d-block">{{user.name}} {{user.lastname1}}</a>
+        </div>
+      </div>
+
+      <!-- SidebarSearch Form -->
+{{!--       <div class="form-inline">
+        <div class="input-group" data-widget="sidebar-search">
+          <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+          <div class="input-group-append">
+            <button class="btn btn-sidebar">
+              <i class="fas fa-search fa-fw"></i>
+            </button>
+          </div>
+        </div>
+      </div> --}}
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+          <li class="nav-item">
+            <a href="/" class="nav-link active">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                Panel de Control
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/adi" class="nav-link">
+              <i class="nav-icon fas fa-copy"></i>
+              <p>
+                Academia
+                <i class="fas fa-angle-left right"></i>
+                {{!-- <span class="badge badge-info right">6</span> --}}
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="/adi" class="nav-link">
+                  <i class="fas fa-columns nav-icon"></i>
+                  <p>Principal</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon fas fa-user-graduate"></i>
+                  <p>
+                    Disc&iacute;pulos
+                    <i class="fas fa-angle-left right"></i>
+                    {{!-- <span class="badge badge-info right">6</span> --}}
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+
+                  <li class="nav-item">
+                    <a href="/adi/pupils/studiying" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Cursante</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/adi/pupils/graduated" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Graduado</p>
+                    </a>
+                  </li>
+
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="/adi/teachers" class="nav-link">
+                  <i class="fas fa-chalkboard-teacher nav-icon"></i>
+                  <p>Facilitadores</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon fas fa-layer-group"></i>
+                  <p>
+                    Niveles
+                    <i class="fas fa-angle-left right"></i>
+                    {{!-- <span class="badge badge-info right">6</span> --}}
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  {{#each levels}}
+                  <li class="nav-item">
+                    <a href="/adi/level/{{id}}" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>{{title}}</p>
+                    </a>
+                  </li>
+                  {{/each}}
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="/adi/reports" class="nav-link">
+                  <i class="far fa-chart-bar nav-icon"></i>
+                  <p>Reportes</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/adi/calendar" class="nav-link">
+                  <i class="far fa-calendar-alt nav-icon"></i>
+                  <p>Calendario</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon fas fa-book-open"></i>
+                  <p>
+                    Control de Estudios
+                    <i class="fas fa-angle-left right"></i>
+                    {{!-- <span class="badge badge-info right">6</span> --}}
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="/adi/levels" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Niveles</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/adi/enrollments" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Inscripciones</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/adi/ratings" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Calificaciones</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-user-friends"></i>
+              <p>
+                Usuarios
+                <i class="right fas fa-group"></i>
+              </p>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
